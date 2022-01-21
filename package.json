@@ -20,7 +20,10 @@
   "dependencies": {
     "express": "^4.17.2",
     "link-module-alias": "^1.2.0",
-    "puppeteer": "^13.1.1"
+    "proxy-chain": "^1.0.4",
+    "puppeteer": "^13.1.1",
+    "puppeteer-extra": "^3.2.3",
+    "puppeteer-page-proxy": "^1.2.8"
   },
   "_moduleAliases": {
     "~app": "app"
