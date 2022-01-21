@@ -23,7 +23,7 @@ const translate = async (from, to, content) => {
     }
 
     const browser = await puppeteer.launch({
-        headless: false,
+        headless: true,
         args: args
     });
 
