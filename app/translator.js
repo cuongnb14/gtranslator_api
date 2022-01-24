@@ -31,7 +31,8 @@ const translate = async (from, to, content) => {
         const url = encodeURI(`https://translate.google.com/?sl=${from}&tl=${to}&text=${content}`)
         const cookies = [{
             'name': 'CONSENT',
-            'value': 'YES+VN.en+'
+            'value': 'YES+VN.en+',
+            'domain': 'translate.google.com'
           }];
           
         const page = await browser.newPage();
