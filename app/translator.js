@@ -29,7 +29,13 @@ const translate = async (from, to, content) => {
 
     try {
         const url = encodeURI(`https://translate.google.com/?sl=${from}&tl=${to}&text=${content}`)
+        const cookies = [{
+            'name': 'CONSENT',
+            'value': 'YES+VN.en+'
+          }];
+          
         const page = await browser.newPage();
+        await page.setCookie(...cookies);
         await page.goto(url, {
             waitUntil: 'networkidle2',
         });
